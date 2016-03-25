@@ -1,0 +1,14 @@
+E:\work\DMS\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\DMS.MongoDbNlog.dll
+E:\work\DMS\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\DMS.MongoDbNlog.pdb
+E:\work\DMS\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\MongoDB.Bson.dll
+E:\work\DMS\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\MongoDB.Driver.Core.dll
+E:\work\DMS\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\MongoDB.Driver.dll
+E:\work\DMS\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\MongoDB.Driver.Legacy.dll
+E:\work\DMS\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\NLog.dll
+E:\work\DMS\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\MongoDB.Bson.xml
+E:\work\DMS\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\MongoDB.Driver.xml
+E:\work\DMS\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\MongoDB.Driver.Legacy.xml
+E:\work\DMS\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\NLog.xml
+E:\work\DMS\Skynet.DMS\DMS.MongoDbNlog\obj\Debug\DMS.MongoDbNlog.dll
+E:\work\DMS\Skynet.DMS\DMS.MongoDbNlog\obj\Debug\DMS.MongoDbNlog.pdb
+E:\work\DMS\Skynet.DMS\DMS.MongoDbNlog\obj\Debug\DMS.MongoDbNlog.csprojResolveAssemblyReference.cache

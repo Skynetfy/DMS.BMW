@@ -1,0 +1,9 @@
+E:\work\DMS\Skynet.DMS\DMS.WebTest\bin\Debug\DMS.WebTest.dll
+E:\work\DMS\Skynet.DMS\DMS.WebTest\bin\Debug\DMS.WebTest.pdb
+E:\work\DMS\Skynet.DMS\DMS.WebTest\obj\Debug\DMS.WebTest.dll
+E:\work\DMS\Skynet.DMS\DMS.WebTest\obj\Debug\DMS.WebTest.pdb
+E:\work\DMS\Skynet.DMS\DMS.WebTest\obj\Debug\DMS.WebTest.csprojResolveAssemblyReference.cache
+E:\work\DMS\Skynet.DMS\DMS.WebTest\bin\Debug\DMS.Common.dll
+E:\work\DMS\Skynet.DMS\DMS.WebTest\bin\Debug\Newtonsoft.Json.dll
+E:\work\DMS\Skynet.DMS\DMS.WebTest\bin\Debug\DMS.Common.pdb
+E:\work\DMS\Skynet.DMS\DMS.WebTest\bin\Debug\Newtonsoft.Json.xml

@@ -1,0 +1,85 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BMW-DMS管理系统</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="~/Content/bootstrap-table.min.css" rel="stylesheet" />
+    <link href="~/Content/admin.css" rel="stylesheet" />
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+    <script src="~/Scripts/Validform_v5.3.2_min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/Solution.js"></script>
+    <script>
+        $(function () {
+            var Accordion = function (el, multiple) {
+                this.el = el || {};
+                this.multiple = multiple || false;
+
+                // Variables privadas
+                var links = this.el.find('.link');
+                var lis = this.el.find('.submenu li');
+                lis.on('click', { obj: lis }, function (e) {
+                    $('.loading-box').show();
+                    $(this).addClass('clicked');
+                    e.data.obj.not($(this)).removeClass('clicked');
+                    var hf = $(this).find("a").attr("data-href");
+                    if (hf !== undefined)
+                        LoadPageMain($('#pagemain'), hf);
+                });
+                // Evento
+                links.on('click', { el: this.el, multiple: this.multiple }, this.dropdown);
+            }
+
+            Accordion.prototype.dropdown = function (e) {
+                var $el = e.data.el;
+                $this = $(this),
+                $next = $this.next();
+
+                $next.slideToggle();
+                $this.parent().toggleClass('open');
+
+                if (!e.data.multiple) {
+                    $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+                };
+            }
+
+            var accordion = new Accordion($('#accordion'), false);
+            LoadPageMain($('#pagemain'), "Chart/Index");
+        });
+    </script>
+</head>
+<body>
+    <div class="loading-box" style="display: none;">
+        <div class="box ">
+            <div class="loader"></div>
+            <div class="loading-text">加载中 ... </div>
+        </div>
+    </div>
+    @Html.Partial("TopMenu")
+    <div class="container-fluid">
+        <div class="row">
+            @Html.Action("LeftMenu")
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <div id="pagemain">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

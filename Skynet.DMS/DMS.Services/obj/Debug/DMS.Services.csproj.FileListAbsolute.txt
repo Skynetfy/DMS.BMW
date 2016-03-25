@@ -1,0 +1,16 @@
+E:\work\DMS\Skynet.DMS\DMS.Services\bin\Debug\DMS.Services.dll
+E:\work\DMS\Skynet.DMS\DMS.Services\bin\Debug\DMS.Services.pdb
+E:\work\DMS\Skynet.DMS\DMS.Services\obj\Debug\DMS.Services.csprojResolveAssemblyReference.cache
+E:\work\DMS\Skynet.DMS\DMS.Services\obj\Debug\DMS.Services.dll
+E:\work\DMS\Skynet.DMS\DMS.Services\obj\Debug\DMS.Services.pdb
+E:\work\DMS\Skynet.DMS\DMS.Services\bin\Debug\DMS.Common.dll
+E:\work\DMS\Skynet.DMS\DMS.Services\bin\Debug\DMS.Entities.dll
+E:\work\DMS\Skynet.DMS\DMS.Services\bin\Debug\DMS.SQLRepository.dll
+E:\work\DMS\Skynet.DMS\DMS.Services\bin\Debug\DMS.Common.pdb
+E:\work\DMS\Skynet.DMS\DMS.Services\bin\Debug\DMS.Entities.pdb
+E:\work\DMS\Skynet.DMS\DMS.Services\bin\Debug\DMS.SQLRepository.pdb
+E:\work\DMS\Skynet.DMS\DMS.Services\bin\Debug\HZ.HHub.Comm.dll
+E:\work\DMS\Skynet.DMS\DMS.Services\bin\Debug\NLog.dll
+E:\work\DMS\Skynet.DMS\DMS.Services\bin\Debug\NLog.xml
+E:\work\DMS\Skynet.DMS\DMS.Services\bin\Debug\Newtonsoft.Json.dll
+E:\work\DMS\Skynet.DMS\DMS.Services\bin\Debug\Newtonsoft.Json.xml
