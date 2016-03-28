@@ -7,3 +7,13 @@ E:\work\DMS\Skynet.DMS\DMS.WebTest\bin\Debug\DMS.Common.dll
 E:\work\DMS\Skynet.DMS\DMS.WebTest\bin\Debug\Newtonsoft.Json.dll
 E:\work\DMS\Skynet.DMS\DMS.WebTest\bin\Debug\DMS.Common.pdb
 E:\work\DMS\Skynet.DMS\DMS.WebTest\bin\Debug\Newtonsoft.Json.xml
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\DMS.WebTest.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\DMS.WebTest.pdb
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\DMS.Common.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Newtonsoft.Json.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\DMS.Common.pdb
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Newtonsoft.Json.xml
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\obj\Debug\DMS.WebTest.csprojResolveAssemblyReference.cache
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\obj\Debug\DMS.WebTest.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\obj\Debug\DMS.WebTest.pdb

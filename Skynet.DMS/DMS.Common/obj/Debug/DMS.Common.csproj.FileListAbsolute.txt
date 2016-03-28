@@ -5,3 +5,10 @@ E:\work\DMS\Skynet.DMS\DMS.Common\obj\Debug\DMS.Common.pdb
 E:\work\DMS\Skynet.DMS\DMS.Common\bin\Debug\Newtonsoft.Json.dll
 E:\work\DMS\Skynet.DMS\DMS.Common\bin\Debug\Newtonsoft.Json.xml
 E:\work\DMS\Skynet.DMS\DMS.Common\obj\Debug\DMS.Common.csprojResolveAssemblyReference.cache
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Common\bin\Debug\DMS.Common.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Common\bin\Debug\DMS.Common.pdb
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Common\bin\Debug\Newtonsoft.Json.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Common\bin\Debug\Newtonsoft.Json.xml
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Common\obj\Debug\DMS.Common.csprojResolveAssemblyReference.cache
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Common\obj\Debug\DMS.Common.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Common\obj\Debug\DMS.Common.pdb
