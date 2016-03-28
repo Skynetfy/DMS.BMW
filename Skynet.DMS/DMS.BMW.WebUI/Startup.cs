@@ -22,8 +22,7 @@ namespace DMS.BMW.WebUI
                 LogoutPath = new PathString("/Login/LoginOut"),
                 CookieSecure = CookieSecureOption.Never,
                 ExpireTimeSpan = TimeSpan.FromHours(1)
-
-
+                
             });
         }
     }
