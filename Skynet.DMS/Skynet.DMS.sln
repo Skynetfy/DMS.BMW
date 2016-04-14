@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DMS.UI", "DMS.UI", "{EE6C702C-CDEB-4BAD-8691-A8721A5F869C}"
 EndProject
@@ -28,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMS.MongoDbNlog", "DMS.MongoDbNlog\DMS.MongoDbNlog.csproj", "{5D2239FE-C247-4CFB-BE73-ACC18EFAF72B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMS.WebUI", "DMS.WebUI\DMS.WebUI.csproj", "{6710F879-6D0D-4220-9C41-956E65E0351B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMS.WebApp", "DMS.WebApp\DMS.WebApp.csproj", "{DAF8365D-E1E4-4723-8214-D14784BF909D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,10 @@ Global
 		{6710F879-6D0D-4220-9C41-956E65E0351B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6710F879-6D0D-4220-9C41-956E65E0351B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6710F879-6D0D-4220-9C41-956E65E0351B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAF8365D-E1E4-4723-8214-D14784BF909D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAF8365D-E1E4-4723-8214-D14784BF909D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAF8365D-E1E4-4723-8214-D14784BF909D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAF8365D-E1E4-4723-8214-D14784BF909D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,5 +86,6 @@ Global
 		{F466EAC6-95EC-4E21-949C-F7CBBD346BDF} = {E46CCB6D-5143-4ECF-801F-D849FDFEF7DC}
 		{5D2239FE-C247-4CFB-BE73-ACC18EFAF72B} = {9D0E4C84-16CC-422E-9075-18AA84425080}
 		{6710F879-6D0D-4220-9C41-956E65E0351B} = {EE6C702C-CDEB-4BAD-8691-A8721A5F869C}
+		{DAF8365D-E1E4-4723-8214-D14784BF909D} = {EE6C702C-CDEB-4BAD-8691-A8721A5F869C}
 	EndGlobalSection
 EndGlobal

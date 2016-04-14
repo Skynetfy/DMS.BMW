@@ -36,7 +36,7 @@ namespace DMS.Services
             {
                 var roleid = userRole.RoleIds.Split(',').ToList();
                 var roles = dbRoleRepository.GetListByIds(roleid);
-                var moduleids = roles.Select(x => x.MenuIds).ToList();
+                var moduleids = roles.Where(x=>!string.IsNullOrEmpty(x.MenuIds)).Select(x => x.MenuIds).ToList();
                 list = dbModuleRepository.GetListByIds(moduleids);
             }
             return list;
@@ -161,6 +161,11 @@ namespace DMS.Services
         public static void AddUserRole(UserRole entity)
         {
             dbUserRoleRepository.Add(entity);
+        }
+
+        public static User GetUser(string username)
+        {
+            return dbUserRepository.GetUser(username);
         }
     }
 }

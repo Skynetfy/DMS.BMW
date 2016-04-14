@@ -23,6 +23,6 @@ E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\MongoDB.Bson.x
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\MongoDB.Driver.xml
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\MongoDB.Driver.Legacy.xml
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.MongoDbNlog\bin\Debug\NLog.xml
-E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.MongoDbNlog\obj\Debug\DMS.MongoDbNlog.csprojResolveAssemblyReference.cache
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.MongoDbNlog\obj\Debug\DMS.MongoDbNlog.dll
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.MongoDbNlog\obj\Debug\DMS.MongoDbNlog.pdb
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.MongoDbNlog\obj\Debug\DMS.MongoDbNlog.csprojResolveAssemblyReference.cache

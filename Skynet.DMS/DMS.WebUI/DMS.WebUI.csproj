@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,7 +40,47 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.0\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -113,7 +154,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -149,15 +189,28 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ChatHub.cs" />
+    <Compile Include="Models\ChatSqlHub.cs" />
+    <Compile Include="Models\ConnectionMapping.cs" />
+    <Compile Include="Models\HtmlMvcExtensions.cs" />
+    <Compile Include="Models\JsonNetResult.cs" />
+    <Compile Include="Models\LoginProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\admin.css" />
+    <Content Include="Content\bootstrap-table.css" />
+    <Content Include="Content\bootstrap-table.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\avatar.png" />
@@ -217,9 +270,28 @@
     <Content Include="Content\Lte\skins\skin-yellow.min.css" />
     <Content Include="Content\Lte\skins\_all-skins.css" />
     <Content Include="Content\Lte\skins\_all-skins.min.css" />
+    <Content Include="Content\ztree\img\diy\1_close.png" />
+    <Content Include="Content\ztree\img\diy\1_open.png" />
+    <Content Include="Content\ztree\img\diy\2.png" />
+    <Content Include="Content\ztree\img\diy\3.png" />
+    <Content Include="Content\ztree\img\diy\4.png" />
+    <Content Include="Content\ztree\img\diy\5.png" />
+    <Content Include="Content\ztree\img\diy\6.png" />
+    <Content Include="Content\ztree\img\diy\7.png" />
+    <Content Include="Content\ztree\img\diy\8.png" />
+    <Content Include="Content\ztree\img\diy\9.png" />
+    <Content Include="Content\ztree\img\line_conn.gif" />
+    <Content Include="Content\ztree\img\loading.gif" />
+    <Content Include="Content\ztree\img\zTreeStandard.gif" />
+    <Content Include="Content\ztree\img\zTreeStandard.png" />
+    <Content Include="Content\ztree\zTreeStyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap-table-zh-CN.js" />
+    <Content Include="Scripts\bootstrap-table-zh-CN.min.js" />
+    <Content Include="Scripts\bootstrap-table.js" />
+    <Content Include="Scripts\bootstrap-table.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -246,6 +318,10 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\plugins\app.js" />
     <Content Include="Scripts\plugins\bootstrap-slider\bootstrap-slider.js" />
@@ -972,6 +1048,20 @@
     <Content Include="Scripts\plugins\timepicker\bootstrap-timepicker.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Solution.js" />
+    <Content Include="Scripts\Validform_v5.3.2_min.js" />
+    <Content Include="Scripts\ztree\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\ztree\jquery.ztree.all-3.5.js" />
+    <Content Include="Scripts\ztree\jquery.ztree.all-3.5.min.js" />
+    <Content Include="Scripts\ztree\jquery.ztree.core-3.5.js" />
+    <Content Include="Scripts\ztree\jquery.ztree.core-3.5.min.js" />
+    <Content Include="Scripts\ztree\jquery.ztree.excheck-3.5.js" />
+    <Content Include="Scripts\ztree\jquery.ztree.excheck-3.5.min.js" />
+    <Content Include="Scripts\ztree\jquery.ztree.exedit-3.5.js" />
+    <Content Include="Scripts\ztree\jquery.ztree.exedit-3.5.min.js" />
+    <Content Include="Scripts\ztree\jquery.ztree.exedit.js" />
+    <Content Include="Scripts\ztree\jquery.ztree.exhide-3.5.js" />
+    <Content Include="Scripts\ztree\jquery.ztree.exhide-3.5.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1010,8 +1100,35 @@
     <Content Include="Scripts\plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="Scripts\plugins\input-mask\phone-codes\phone-codes.json" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Admin\Top.cshtml" />
+    <Content Include="Views\Admin\Left.cshtml" />
+    <Content Include="Views\Admin\Content.cshtml" />
+    <Content Include="Views\Admin\Footer.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Module.cshtml" />
+    <Content Include="Views\User\RoleIndex.cshtml" />
+    <Content Include="Views\Chat\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DMS.Common\DMS.Common.csproj">
+      <Project>{1a9e09d5-ccc0-4def-9efd-c703361afe7f}</Project>
+      <Name>DMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMS.Entities\DMS.Entities.csproj">
+      <Project>{92f12519-0751-483f-b7d7-1fe1db43ef6e}</Project>
+      <Name>DMS.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMS.MongoDbNlog\DMS.MongoDbNlog.csproj">
+      <Project>{5d2239fe-c247-4cfb-be73-acc18efaf72b}</Project>
+      <Name>DMS.MongoDbNlog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMS.Services\DMS.Services.csproj">
+      <Project>{90aef740-c817-4ceb-937e-f208ad261482}</Project>
+      <Name>DMS.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

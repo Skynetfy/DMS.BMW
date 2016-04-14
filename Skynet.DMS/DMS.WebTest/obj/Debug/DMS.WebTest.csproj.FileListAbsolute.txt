@@ -17,3 +17,14 @@ E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Newtonsoft.Json.xm
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\obj\Debug\DMS.WebTest.csprojResolveAssemblyReference.cache
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\obj\Debug\DMS.WebTest.dll
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\obj\Debug\DMS.WebTest.pdb
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Microsoft.Owin.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Microsoft.Owin.Security.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Owin.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Microsoft.Owin.xml
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.WebTest\bin\Debug\Microsoft.Owin.Security.xml

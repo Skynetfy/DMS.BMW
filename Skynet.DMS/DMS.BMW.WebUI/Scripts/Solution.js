@@ -58,3 +58,22 @@ function CreateJavaScript(url, func) {
     s1.onload = func;
     head.appendChild(s1);
 }
+
+function createIframe(obj, url) {
+    var o = obj || document.getElementById('iframetarget');
+    var iframe = document.createElement('iframe');
+    iframe.src = url;
+    //iframe.scrolling = "no";
+    iframe.frameBorder = 0;
+    iframe.width = '100%';
+    iframe.height = '100%';
+    iframe.onload = function (e) {
+        alert("d");
+        var $o = $(e.target);
+        $o.height(window.outerHeight - 250);
+        $('.loading-box').hide();
+    }
+    e.removeAll();
+    o.appendChild(iframe);
+    
+}

@@ -18,10 +18,14 @@ body {
 .layout-boxed body {
   height: 100%;
 }
+*:focus {
+    outline:none; 
+}
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font:14px/1.5 "Microsoft Yahei",Tahoma, Helvetica, Arial, "SimSun", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
@@ -96,7 +100,7 @@ body {
 .content-wrapper,
 .right-side {
   min-height: 100%;
-  background-color: #EAEBEC;
+  background-color: #F7F7F7;
   z-index: 800;
 }
 .main-footer {
@@ -540,6 +544,20 @@ a:focus {
   padding: 0;
   margin-right: 10px;
   margin-top: 3px;
+}
+.sidebar-menu li.active {
+  border-right: 5px solid #1ABB9C;
+}
+.sidebar-menu li.active > a {
+  /* text-shadow: rgba(0, 0, 0, 0.25) 0 -1px 0; */
+  /* background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5b6479), color-stop(100%, #4c5566)), #686e78; */
+  background: -webkit-linear-gradient(#334556, #2C4257), #2A3F54;
+  background: -moz-linear-gradient(#334556, #2C4257), #2A3F54;
+  background: -o-linear-gradient(#334556, #2C4257), #2A3F54;
+  /* background: linear-gradient(#334556, #2C4257), #2A3F54; */
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0; */
 }
 .sidebar-menu li.active > a > .fa-angle-left {
   -webkit-transform: rotate(-90deg);
@@ -2612,7 +2630,7 @@ a:focus {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  border-top: 1px solid #f4f4f4;
+  /*border-top: 1px solid #f4f4f4;*/
 }
 .table > thead > tr > th {
   border-bottom: 2px solid #f4f4f4;

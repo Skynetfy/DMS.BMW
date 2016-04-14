@@ -16,9 +16,11 @@ namespace DMS.BMW.WebUI.Models
             StringBuilder sb = new StringBuilder();
             foreach (var item in query)
             {
-                sb.AppendLine(@"<li><div class='link'>");
-                sb.AppendLine(@"" + item.ModuleName + "<i class='" + item.Icon + "'></i><i class='fa fa-chevron-down'></i>");
-                sb.AppendLine(@"</div>" + BuildChildrenMenu(item.Id, modules.Where(x => x.ParentId == item.Id).ToList()) + " </li>");
+                sb.AppendLine(@"<li class='treeview'>");
+                sb.AppendLine(@"<a href='#'><i class='" + item.Icon + "'></i> <span>" + item.ModuleName + "</span>");
+                sb.AppendLine(@"<i class='fa fa-angle-left pull-right'></i></a>");
+                sb.AppendLine(BuildChildrenMenu(item.Id, query));
+                sb.AppendLine(@"</li>");
             }
             return MvcHtmlString.Create(sb.ToString());
         }
@@ -26,12 +28,13 @@ namespace DMS.BMW.WebUI.Models
         private static string BuildChildrenMenu(Int64 parentid, IList<Module> modules)
         {
             StringBuilder sb = new StringBuilder();
-            if (modules.Count > 0)
+            var dataList = modules.Where(x => x.ParentId == parentid).ToList();
+            if (dataList.Count > 0)
             {
-                sb.AppendLine(@"<ul class='submenu'>");
-                foreach (var item in modules)
+                sb.AppendLine(@"<ul class='treeview-menu'>");
+                foreach (var item in dataList)
                 {
-                    sb.AppendLine(@"<li><i class='glyphicon glyphicon-paperclip'></i><a href='#' data-href='" + item.Url + "'>" + item.ModuleName + "</a></li>");
+                    sb.AppendLine(@"<li><a href='#' data-url='" + item.Url + "'><i class='fa fa-circle-o'></i>" + item.ModuleName + "</a>"+ BuildChildrenMenu(item.Id, modules) + "</li>");
                 }
                 sb.AppendLine(@"</ul>");
             }

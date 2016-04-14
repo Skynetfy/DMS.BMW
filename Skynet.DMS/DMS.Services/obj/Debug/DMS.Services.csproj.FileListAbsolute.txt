@@ -30,3 +30,14 @@ E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\bin\Debug\NLog.xml
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\obj\Debug\DMS.Services.csprojResolveAssemblyReference.cache
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\obj\Debug\DMS.Services.dll
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\obj\Debug\DMS.Services.pdb
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\bin\Debug\Microsoft.Owin.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\bin\Debug\Microsoft.Owin.Security.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\bin\Debug\Owin.dll
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\bin\Debug\Microsoft.Owin.xml
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Services\bin\Debug\Microsoft.Owin.Security.xml

@@ -1,0 +1,257 @@
+﻿
+@using DMS.Entities.SQLEntites
+@{
+    Layout = null;
+}
+<link href="~/Content/ztree/zTreeStyle.css" rel="stylesheet" />
+<section class="content-header">
+    <h1>
+        基础管理
+        <small>用户管理</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li class="active">用户管理</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-widget">
+        <div class="box-body">
+            <div id="toolbar">
+                <button id="addbtn" class="btn btn-success btn-sm" data-toggle="modal" data-target="#addModel">
+                    <i class="glyphicon glyphicon-plus"></i> Add
+                </button>
+                <button id="removebtn" class="btn btn-danger btn-sm" disabled>
+                    <i class="glyphicon glyphicon-remove"></i> Delete
+                </button>
+            </div>
+            <table id="table"
+                   data-toggle="table"
+                   data-toolbar="#toolbar"
+                   data-url="@Url.Action("GetUserPageList")"
+                   data-height="auto"
+                   data-side-pagination="server"
+                   data-pagination="true"
+                   data-show-columns="true"
+                   data-show-toggle="true"
+                   data-show-refresh="true"
+                   data-page-size="20"
+                   data-page-list="[20, 50, 100, 200]"
+                   data-search="true"
+                   data-content-type="application/json"
+                   data-sort-name="CreateDate"
+                   data-sort-order="desc"
+                   data-row-style="rowStyle"
+                   data-striped="true">
+                <thead>
+                    <tr>
+                        <th data-field="state" data-checkbox="true"></th>
+                        <th data-field="UserName" data-sortable="true" data-searchable="true">用户名</th>
+                        <th data-field="DisplayName" data-sortable="true">姓名</th>
+                        <th data-field="Email" data-sortable="true">邮件</th>
+                        <th data-field="PhoneNo" data-sortable="true">电话</th>
+                        <th data-field="Status" data-sortable="true" data-formatter="StatusFormatter">状态</th>
+                        <th data-sortable="true" data-formatter="ActionFormatter">操作</th>
+                        @*<th data-field="CancelPolicyDesc" data-sortable="true" data-width="50">CancelPolicyDesc</th>
+                            <th data-field="GuaranteePolicyDesc" data-sortable="true" data-width="50">GuaranteePolicyDesc</th>*@
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class="modal fade" id="addModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel"><span class="glyphicon glyphicon-pencil"></span></h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" action="@Url.Action("AddUser")" method="POST" data-ajax="true" data-ajax-loading="#price-loadingid" data-ajax-method="Post" data-ajax-mode="replace" data-ajax-success="addSuccess">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">用户名</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="username" class="form-control" placeholder="用户名" datatype="s1-16" errormsg="昵称至少1个字符,最多16个字符！">
+                            </div>
+                            <label class="col-sm-4 tips"><code class="Validform_checktip">*必填</code></label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">姓名</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="displayname" class="form-control" placeholder="姓名" datatype="*1-16" errormsg="昵称至少1个字符,最多16个字符！">
+                            </div>
+                            <label class="col-sm-4 tips"><code class="Validform_checktip">*必填</code></label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">密码</label>
+                            <div class="col-sm-6">
+                                <input type="password" name="userpassword" class="form-control" placeholder="密码" datatype="s6-16" errormsg="昵称至少6个字符,最多16个字符！">
+                            </div>
+                            <label class="col-sm-4 tips"><code class="Validform_checktip">*必填</code></label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">确认密码</label>
+                            <div class="col-sm-6">
+                                <input type="password" name="password" recheck="userpassword" class="form-control" placeholder="密码" datatype="*" nullmsg="请再输入一次密码！" errormsg="您两次输入的账号密码不一致！">
+                            </div>
+                            <label class="col-sm-4 tips"><code class="Validform_checktip">*必填</code></label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">邮箱</label>
+                            <div class="col-sm-6">
+                                <input type="email" name="email" class="form-control" placeholder="邮箱" datatype="e" errormsg="请输入正确的邮箱格式！">
+                            </div>
+                            <label class="col-sm-4 tips"><code class="Validform_checktip">*必填</code></label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">电话</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="phoneno" class="form-control" placeholder="电话" datatype="s6-30" errormsg="电话号码有误！">
+                            </div>
+                            <label class="col-sm-4 tips"><code class="Validform_checktip">*必填</code></label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">状态</label>
+                            <div class="col-sm-6">
+                                <label class="radio-inline">
+                                    <input type="radio" name="status" value="1" checked="checked"> 启用
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="status" value="0"> 禁用
+                                </label>
+                            </div>
+                            <label class="col-sm-4"></label>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="roles-model" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel"><span class="glyphicon glyphicon-pencil"></span></h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" action="@Url.Action("EditUserRole")" method="POST" data-ajax="true" data-ajax-loading="#price-loadingid" data-ajax-method="Post" data-ajax-mode="replace" data-ajax-success="addSuccess">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">角色列表</label>
+                            <div class="col-sm-6">
+                                <input type="hidden" name="uid" value="0" />
+                                <input type="hidden" name="roleids" id="hdnroles" />
+                                <ul id="tree-roles" class="ztree"></ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="~/Scripts/bootstrap-table.min.js"></script>
+<script src="~/Scripts/bootstrap-table-zh-CN.min.js"></script>
+<script src="~/Scripts/ztree/jquery.ztree.core-3.5.min.js"></script>
+<script src="~/Scripts/ztree/jquery.ztree.excheck-3.5.js"></script>
+<script>
+    var treeObj, $table = $("#table"),
+        $remove = $("#removebtn"),
+        selections = [];
+    $table.on('check.bs.table uncheck.bs.table ' +
+    'check-all.bs.table uncheck-all.bs.table', function () {
+        $remove.prop('disabled', !$table.bootstrapTable('getSelections').length);
+        // save your data, here just save the current page
+        selections = getIdSelections($table);
+        // push or splice the selections if you want to save all data selections
+    });
+    $(function () {
+        $(".form-horizontal").Validform({
+            tiptype: 2,
+            label: ".tips",
+            showAllError: true,
+            datatype: {
+                "zh1-6": /^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/
+            }
+        });
+        $remove.click(function () {
+            if (confirm("确定要删除吗？"))
+                $.post("@Url.Action("DeleteUser")", { id: selections.join(',') }, function (data) { RefreshTable(); });
+        });
+    });
+
+    function StatusFormatter(v, r) {
+        var h = [];
+        if (r.Status == 1)
+            h.push("正常")
+        else {
+            h.push("禁用")
+        }
+        return h.join('');
+    }
+
+    function ActionFormatter(v, r) {
+        var h = [];
+        h.push('<button type="button" class="btn btn-primary btn-xs"  data-toggle="modal" data-target="#roles-model" onclick="InitDataInfo(' + r.Id.toString() + ')">角色分配</button>');
+        return h.join('');
+    }
+
+    function InitDataInfo(id) {
+        initTree(id);
+        $('input[name=uid]').val(id);
+    }
+
+    function initTree(id) {
+        if (treeObj != null)
+            treeObj.destroy();
+        var setting = {
+            check: {
+                enable: true,
+                chkboxType: { "Y": "ps", "N": "ps" }
+            },
+            async: {
+                enable: true,
+                url: '@Url.Action("GetRolesZtreeDataList")',
+                otherParam: ["id", id],
+                type: "get"
+            },
+            data: {
+                simpleData: {
+                    enable: true,
+                    idKey: "id",
+                    pIdKey: "pId",
+                    rootPId: 0
+                }
+            },
+            callback: {
+                onCheck: zTreeOnCheck
+            }
+        };
+        treeObj = $.fn.zTree.init($("#tree-roles"), setting);
+    }
+    function zTreeOnCheck(event, treeId, treeNode) {
+        var nodes = treeObj.getCheckedNodes(true);
+        var gids = [];
+        $.each(nodes, function (i, r) {
+            gids.push(r.id);
+        });
+        $('#hdnroles').val(gids.join(','));
+    };
+</script>

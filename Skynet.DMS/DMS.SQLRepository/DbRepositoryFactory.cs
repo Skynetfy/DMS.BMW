@@ -28,5 +28,30 @@ namespace DMS.SQLRepository
         {
             get { return new ModuleRepository(); }
         }
+
+        public static IHobbitesRepository DbHobbitesRepository
+        {
+            get { return new HobbitesRepository(); }
+        }
+
+        public static IHobbityTypeRepository DbHobbityTypeRepository
+        {
+            get { return new HobbityTypeRepository(); }
+        }
+
+        public static IChatUserRepository DbChatUserRepository
+        {
+            get { return new ChatUserRepository(); }
+        }
+
+        public static IChatConnectionRepository DbChatConnectionRepository
+        {
+            get { return new ChatConnectionRepository(); }
+        }
+
+        public static IUserMessageRepository DbUserMessageRepository
+        {
+            get { return new UserMessageRepository(); }
+        }
     }
 }

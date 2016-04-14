@@ -1,0 +1,35 @@
+﻿@model List<DMS.Entities.SQLEntites.Hobbites>
+@{
+    Layout = null;
+}
+<ul class="list-unstyled timeline">
+    @{
+        if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <li>
+                    <div class="block">
+                        <div class="tags">
+                            <a href="" class="tag">
+                                <span>@item.LastModifyDate.ToString("T")</span>
+                            </a>
+                        </div>
+                        <div class="block_content">
+                            <h2 class="title">
+                                <a>@item.HbName</a>
+                            </h2>
+                            <div class="byline">
+                                <span>@item.LastModifyDate.ToString("g")</span>
+                            </div>
+                            <p class="excerpt">
+                                @item.HbDesc
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            }
+        }
+    }
+
+</ul>

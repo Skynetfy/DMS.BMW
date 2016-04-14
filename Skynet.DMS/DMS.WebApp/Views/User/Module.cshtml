@@ -1,0 +1,326 @@
+﻿
+
+@using DMS.Entities.SQLEntites
+@model List<DMS.Entities.SQLEntites.Module>
+@{
+    Layout = null;
+}
+<div class="page-title">
+    <div class="title_left">
+        <h3>
+            菜单管理
+            <small>
+                Some examples to get you started
+            </small>
+        </h3>
+    </div>
+
+    <div class="title_right">
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Table design <small>Custom design</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="#">Settings 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content">
+                <div id="toolbar">
+                    <button id="addbtn" class="btn btn-success btn-sm" data-toggle="modal" data-target="#addModel">
+                        <i class="glyphicon glyphicon-plus"></i> Add
+                    </button>
+                    <button id="removebtn" class="btn btn-danger btn-sm" disabled>
+                        <i class="glyphicon glyphicon-remove"></i> Delete
+                    </button>
+                </div>
+                <table id="table"
+                       data-toggle="table"
+                       data-toolbar="#toolbar"
+                       data-url="@Url.Action("GetModulesPageList")"
+                       data-height="auto"
+                       data-side-pagination="server"
+                       data-pagination="true"
+                       data-show-columns="true"
+                       data-show-toggle="true"
+                       data-show-refresh="true"
+                       data-page-size="20"
+                       data-page-list="[20, 50, 100, 200]"
+                       data-search="true"
+                       data-content-type="application/json"
+                       data-sort-name="CreateDate"
+                       data-sort-order="desc"
+                       data-row-style="rowStyle"
+                       data-striped="true">
+                    <thead>
+                        <tr>
+                            <th data-field="state" data-checkbox="true"></th>
+                            <th data-field="ModuleName" data-sortable="true" data-searchable="true">菜单名称</th>
+                            <th data-field="Url" data-sortable="true">地址</th>
+                            <th data-field="IsUse" data-sortable="true">状态</th>
+                            <th data-field="ParentId" data-sortable="true">父级菜单</th>
+                            <th data-field="Icon" data-sortable="true" data-formatter="ImgIconFormatter">图标</th>
+                            <th data-field="Level" data-sortable="true">级别</th>
+                            <th data-sortable="true" data-formatter="ActionFormatter">操作</th>
+                            @*<th data-field="CancelPolicyDesc" data-sortable="true" data-width="50">CancelPolicyDesc</th>
+                                <th data-field="GuaranteePolicyDesc" data-sortable="true" data-width="50">GuaranteePolicyDesc</th>*@
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <span class="glyphicon glyphicon-plus"></span> 新增
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" action="@Url.Action("AddModules")" method="POST" data-ajax="true" data-ajax-loading="#price-loadingid" data-ajax-method="Post" data-ajax-mode="replace" data-ajax-success="addSuccess">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">菜单名称</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="menuname" class="form-control" placeholder="菜单名称" datatype="*1-16" errormsg="昵称至少1个字符,最多16个字符！">
+                        </div>
+                        <label class="col-sm-4 tips"><code class="Validform_checktip">*必填</code></label>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">URL地址</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="url" class="form-control" placeholder="url">
+                        </div>
+                        <small class="col-sm-4 help-block tips">*一级不填，二级必填</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">父级菜单</label>
+                        <div class="col-sm-6">
+                            <select name="parentid" class="form-control">
+                                <option>无</option>
+                                @{
+                                    List<Module> data = Model as List<Module>;
+                                    if (data != null)
+                                    {
+                                        foreach (var item in data)
+                                        {
+                                            <option value="@item.Id">@item.ModuleName</option>
+                                        }
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <small class="col-sm-4 help-block tips">*一级不填，二级必填</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">图标</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="iconimage" class="form-control" placeholder="icon">
+                        </div>
+                        <small class="col-sm-4 help-block tips">*一级必填，二级不填</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">级别</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" name="level">
+                                <option selected="selected" value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                        <label class="col-sm-4"></label>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">状态</label>
+                        <div class="col-sm-6">
+                            <label class="radio-inline">
+                                <input type="radio" name="status" value="1" checked="checked"> 启用
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="status" value="0"> 禁用
+                            </label>
+                        </div>
+                        <label class="col-sm-4"></label>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="UpdateModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <span class="glyphicon glyphicon-plus"></span> 修改
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" action="@Url.Action("AddModules")" method="POST" data-ajax="true" data-ajax-loading="#price-loadingid" data-ajax-method="Post" data-ajax-mode="replace" data-ajax-success="addSuccess">
+                    <input type="hidden" name="moduleid" value="0" />
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">菜单名称</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="menuname" class="form-control" placeholder="菜单名称" datatype="*1-16" errormsg="昵称至少1个字符,最多16个字符！">
+                        </div>
+                        <label class="col-sm-4 tips"><code class="Validform_checktip">*必填</code></label>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">URL地址</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="url" class="form-control" placeholder="url">
+                        </div>
+                        <small class="col-sm-4 help-block tips">*一级不填，二级必填</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">父级菜单</label>
+                        <div class="col-sm-6">
+                            <select name="parentid" class="form-control">
+                                <option>无</option>
+                                @{
+                                    List<Module> ModelData = Model as List<Module>;
+                                    if (ModelData != null)
+                                    {
+                                        foreach (var item in ModelData)
+                                        {
+                                            <option value="@item.Id">@item.ModuleName</option>
+                                        }
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <small class="col-sm-4 help-block tips">*一级不填，二级必填</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">图标</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="iconimage" class="form-control" placeholder="icon">
+                        </div>
+                        <small class="col-sm-4 help-block tips">*一级必填，二级不填</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">级别</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" name="level">
+                                <option selected="selected" value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                        <label class="col-sm-4"></label>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">状态</label>
+                        <div class="col-sm-6">
+                            <label class="radio-inline">
+                                <input type="radio" name="status" value="1" checked="checked"> 启用
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="status" value="0"> 禁用
+                            </label>
+                        </div>
+                        <label class="col-sm-4"></label>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/bootstrap-table.min.js"></script>
+<script src="~/Scripts/bootstrap-table-zh-CN.min.js"></script>
+<script>
+    var $table = $("#table"),
+        $remove = $("#removebtn"),
+           selections = [];
+    $table.on('check.bs.table uncheck.bs.table ' +
+    'check-all.bs.table uncheck-all.bs.table', function () {
+        $remove.prop('disabled', !$table.bootstrapTable('getSelections').length);
+        // save your data, here just save the current page
+        selections = getIdSelections($table);
+        // push or splice the selections if you want to save all data selections
+    });
+    $(function () {
+        $(".form-horizontal").Validform({
+            tiptype: 2,
+            label: ".tips",
+            showAllError: true,
+            datatype: {
+                "zh1-6": /^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/
+            }
+        });
+        $remove.click(function () {
+            if (confirm("确定要删除吗？"))
+                $.post("@Url.Action("DeleteModule")", { id: selections.join(',') }, function (data) { RefreshTable(); });
+        });
+    });
+
+    function ImgIconFormatter(v, r) {
+        var h = [];
+        h.push('<span class="' + r.Icon + '"></span>');
+        return h.join('');
+    }
+
+    function ActionFormatter(v, r) {
+        var h = [];
+        h.push('<button type="button" class="btn btn-primary btn-xs"  data-toggle="modal" data-target="#UpdateModel" onclick="initModuleData(' + r.Id + ')">修改</button>');
+        return h.join('');
+    }
+
+    function initModuleData(id) {
+        $.getJSON("@Url.Action("GetModuleById")", { id: id }, function (d) {
+            if (d.Status === 0 && d.Result != null) {
+                $('input[name="menuname"]').val(d.Result.ModuleName);
+                $('input[name="url"]').val(d.Result.Url);
+                $('select[name="parentid"]').val(d.Result.ParentId);
+                $('input[name="iconimage"]').val(d.Result.Icon);
+                $('select[name="level"]').val(d.Result.Level);
+                $('input[name="status"]').val(d.Result.IsUse);
+                $('input[name="moduleid"]').val(d.Result.Id);
+            }
+        });
+    }
+</script>

@@ -41,9 +41,14 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLEntites\BaseEntity.cs" />
+    <Compile Include="SQLEntites\ChatConnection.cs" />
+    <Compile Include="SQLEntites\ChatUser.cs" />
+    <Compile Include="SQLEntites\Hobbites.cs" />
+    <Compile Include="SQLEntites\HobbityType.cs" />
     <Compile Include="SQLEntites\Module.cs" />
     <Compile Include="SQLEntites\Role.cs" />
     <Compile Include="SQLEntites\User.cs" />
+    <Compile Include="SQLEntites\UserMessage.cs" />
     <Compile Include="SQLEntites\UserRole.cs" />
   </ItemGroup>
   <ItemGroup>

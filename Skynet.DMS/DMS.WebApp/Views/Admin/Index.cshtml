@@ -1,0 +1,112 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Index</title>
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    @*<link href="~/Content/bootstrap-table.min.css" rel="stylesheet" />*@
+    <link href="~/fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/gente/animate.min.css" rel="stylesheet" />
+    <!-- Custom styling plus plugins -->
+    <link href="~/Content/gente/custom.css" rel="stylesheet" />
+    <link href="~/Content/gente/icheck/flat/green.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/gente/nprogress.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="~/Scripts/gente/html5shiv.min.js"></script>
+          <script src="~/Scripts/gente/respond.min.js"></script>
+          <![endif]-->
+    <style>
+        #menu_toggle i {
+            color: white;
+            font-size: 18px;
+        }
+
+            #menu_toggle i:hover {
+                color: #efefef;
+            }
+    </style>
+</head>
+
+<body class="nav-md">
+    <div class="loading-box" style="display: none;">
+        <div class="box ">
+            <div class="loader"></div>
+            <div class="loading-text">加载中 ... </div>
+        </div>
+    </div>
+    <div class="container body">
+
+        <div class="main_container">
+            @Html.Action("Left")
+            <!-- top navigation -->
+            @Html.Action("Top")
+            <!-- /top navigation -->
+            <!-- page content -->
+            @Html.Action("Content")
+            <!-- /page content -->
+        </div>
+    </div>
+    <div id="custom_notifications" class="custom-notifications dsp_none">
+        <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group"></ul>
+        <div class="clearfix"></div>
+        <div id="notif-group" class="tabbed_notifications"></div>
+    </div>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/gente/progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="~/Scripts/gente/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="~/Scripts/gente/icheck/icheck.min.js"></script>
+    <script src="~/Scripts/gente/pace/pace.min.js"></script>
+
+    <script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+
+    <script src="~/Scripts/gente/custom.js"></script>
+    <script src="~/Scripts/Solution.js"></script>
+    <script>
+        var messageHub = $.connection.messagehub;
+        $(function () {
+            $('#sidebar-menu ul.child_menu li').on('click', {}, function (e) {
+                $('.loading-box').show();
+                e.preventDefault();
+                e.cancelBubble = true;
+                e.stopPropagation();
+                var _this = $(this);
+                var h = _this.children('a').attr("data-href");
+                if (h != undefined && h !== '#') {
+                    // LoadPageMain($('#pagemain'), h);
+                    createIframe(document.getElementById("pagemain"), h);
+                }
+            });
+            messageHub.client.addChatMessage = function (name, type, message, date, count) {
+                // Add the message to the page.
+                var h = [];
+                h.push('<li><a><span class="image"><img src="images/img.jpg" alt="Profile Image"></span>');
+                h.push('<span><span>' + name + '</span><span class="time">' + date + '</span></span>');
+                h.push('<span class="message">' + message + '</span>');
+                h.push('</a></li>');
+                $('#menu1').append(h.join(''));
+                $('#messageCount').html(count);
+            };
+        });
+        function htmlEncode(value) {
+            var encodedValue = $('<div />').text(value).html();
+            return encodedValue;
+        }
+    </script>
+    <!-- /datepicker -->
+    <!-- /footer content -->
+</body>
+</html>

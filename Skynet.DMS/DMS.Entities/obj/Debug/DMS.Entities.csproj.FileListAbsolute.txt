@@ -5,6 +5,6 @@ E:\work\DMS\Skynet.DMS\DMS.Entities\obj\Debug\DMS.Entities.pdb
 E:\work\DMS\Skynet.DMS\DMS.Entities\obj\Debug\DMS.Entities.csprojResolveAssemblyReference.cache
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Entities\bin\Debug\DMS.Entities.dll
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Entities\bin\Debug\DMS.Entities.pdb
-E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Entities\obj\Debug\DMS.Entities.csprojResolveAssemblyReference.cache
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Entities\obj\Debug\DMS.Entities.dll
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Entities\obj\Debug\DMS.Entities.pdb
+E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.Entities\obj\Debug\DMS.Entities.csprojResolveAssemblyReference.cache

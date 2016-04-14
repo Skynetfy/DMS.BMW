@@ -1,0 +1,3474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="QueryRoomFreeWithActivityList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomFreeWithActivityListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryRoomFreeWithActivityListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomFreeAndPriceWithActivityList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomFreeAndPriceWithActivityListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryRoomFreeAndPriceWithActivityListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoubleCheckBeforeCreateOrderMerge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRoomType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sActivityId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoubleCheckBeforeCreateOrderMergeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoubleCheckBeforeCreateOrderMergeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoubleCheckBeforeCreateOrderWithActivity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRoomType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sActivityId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoubleCheckBeforeCreateOrderWithActivityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoubleCheckBeforeCreateOrderWithActivityResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrderWithActivity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRoomType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iRoomCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkEmail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dArrTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JsonDailyRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sActivityId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrderWithActivityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateOrderWithActivityResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrderWithActivityEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRoomType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iRoomCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkEmail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dArrTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JsonDailyRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sActivityId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCreditNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrderWithActivityExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateOrderWithActivityExResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomFreeWithHotelList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonHotelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomFreeWithHotelListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryRoomFreeWithHotelListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomFree">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRoomType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomFreeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryRoomFreeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonOrderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryOrderIDFromRequestNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryOrderIDFromRequestNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryOrderIDFromRequestNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrderMerge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRoomType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iRoomCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkEmail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dArrTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCreditNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JsonDailyRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonPaymentCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sActivityId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrderMergeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateOrderMergeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRoomType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iRoomCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCreditNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JsonDailyRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonPaymentCard" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrder2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRoomType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iRoomCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCreditNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JsonDailyRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonPaymentCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrder2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateOrder2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrderEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRoomType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iRoomCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkEmail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dArrTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCreditNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JsonDailyRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonPaymentCard" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrderExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateOrderExResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="iRoomCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sComment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModifyOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyOrderWithCreditNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="iRoomCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCreditNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sComment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyOrderWithCreditNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModifyOrderWithCreditNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelOrderNoCondition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOrderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelOrderNoConditionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelOrderNoConditionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomPriceUpdated">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dModifiedSince" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomPriceUpdatedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryRoomPriceUpdatedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomPriceState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRoomType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomPriceStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryRoomPriceStateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomPriceOneHotel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomPriceOneHotelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryRoomPriceOneHotelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryActivityIDList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryActivityIDListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryActivityIDListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryHotelIDList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryHotelIDListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryHotelIDListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryHotelIDListAll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryHotelIDListAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryHotelIDListAllResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryHotel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonHotelID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryHotelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryHotelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoubleCheckBeforeCreateOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRoomType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoubleCheckBeforeCreateOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoubleCheckBeforeCreateOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryHourRentHotelIDList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryHourRentHotelIDListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryHourRentHotelIDListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomFreeWithHourRentList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonHotelNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomFreeWithHourRentListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryRoomFreeWithHourRentListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomPriceWithHourRentList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonHotelNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRoomPriceWithHourRentListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryRoomPriceWithHourRentListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoubleCheckBeforeCreateOrderWithHourRent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRoomType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoubleCheckBeforeCreateOrderWithHourRentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoubleCheckBeforeCreateOrderWithHourRentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrderWithHourRent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRoomType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iRoomCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkEmail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dArrTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JsonDailyRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrderWithHourRentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateOrderWithHourRentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrderWithHourRent2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRoomType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iRoomCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLinkEmail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dArrTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JsonDailyRate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCreditNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrderWithHourRent2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateOrderWithHourRent2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoubleCheckBeforeCreateOrderForAllRoomType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHotelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckIn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dCheckOut" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoubleCheckBeforeCreateOrderForAllRoomTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoubleCheckBeforeCreateOrderForAllRoomTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestOrderRefund">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOrderID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dAmount" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestOrderRefundResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestOrderRefundResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="QueryRoomFreeWithActivityListSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryRoomFreeWithActivityList" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithActivityListSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryRoomFreeWithActivityListResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeAndPriceWithActivityListSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryRoomFreeAndPriceWithActivityList" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeAndPriceWithActivityListSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryRoomFreeAndPriceWithActivityListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderMergeSoapIn">
+    <wsdl:part name="parameters" element="tns:DoubleCheckBeforeCreateOrderMerge" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderMergeSoapOut">
+    <wsdl:part name="parameters" element="tns:DoubleCheckBeforeCreateOrderMergeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderWithActivitySoapIn">
+    <wsdl:part name="parameters" element="tns:DoubleCheckBeforeCreateOrderWithActivity" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderWithActivitySoapOut">
+    <wsdl:part name="parameters" element="tns:DoubleCheckBeforeCreateOrderWithActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithActivitySoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrderWithActivity" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithActivitySoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrderWithActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithActivityExSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrderWithActivityEx" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithActivityExSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrderWithActivityExResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithHotelListSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryRoomFreeWithHotelList" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithHotelListSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryRoomFreeWithHotelListResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryRoomFree" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryRoomFreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryOrder" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderIDFromRequestNoSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryOrderIDFromRequestNo" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderIDFromRequestNoSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryOrderIDFromRequestNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderMergeSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrderMerge" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderMergeSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrderMergeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrder" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrder2SoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrder2" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrder2SoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrder2Response" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderExSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrderEx" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderExSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrderExResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyOrder" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOrderWithCreditNoSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyOrderWithCreditNo" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOrderWithCreditNoSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyOrderWithCreditNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelOrder" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderNoConditionSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelOrderNoCondition" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderNoConditionSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelOrderNoConditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceUpdatedSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryRoomPriceUpdated" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceUpdatedSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryRoomPriceUpdatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceStateSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryRoomPriceState" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceStateSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryRoomPriceStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceOneHotelSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryRoomPriceOneHotel" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceOneHotelSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryRoomPriceOneHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryActivityIDListSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryActivityIDList" />
+  </wsdl:message>
+  <wsdl:message name="QueryActivityIDListSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryActivityIDListResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelIDListSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryHotelIDList" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelIDListSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryHotelIDListResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelIDListAllSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryHotelIDListAll" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelIDListAllSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryHotelIDListAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryHotel" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:DoubleCheckBeforeCreateOrder" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:DoubleCheckBeforeCreateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryHourRentHotelIDListSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryHourRentHotelIDList" />
+  </wsdl:message>
+  <wsdl:message name="QueryHourRentHotelIDListSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryHourRentHotelIDListResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithHourRentListSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryRoomFreeWithHourRentList" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithHourRentListSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryRoomFreeWithHourRentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceWithHourRentListSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryRoomPriceWithHourRentList" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceWithHourRentListSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryRoomPriceWithHourRentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderWithHourRentSoapIn">
+    <wsdl:part name="parameters" element="tns:DoubleCheckBeforeCreateOrderWithHourRent" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderWithHourRentSoapOut">
+    <wsdl:part name="parameters" element="tns:DoubleCheckBeforeCreateOrderWithHourRentResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithHourRentSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrderWithHourRent" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithHourRentSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrderWithHourRentResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithHourRent2SoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrderWithHourRent2" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithHourRent2SoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrderWithHourRent2Response" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderForAllRoomTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:DoubleCheckBeforeCreateOrderForAllRoomType" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderForAllRoomTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:DoubleCheckBeforeCreateOrderForAllRoomTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="RequestOrderRefundSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestOrderRefund" />
+  </wsdl:message>
+  <wsdl:message name="RequestOrderRefundSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestOrderRefundResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithActivityListHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithActivityListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeAndPriceWithActivityListHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeAndPriceWithActivityListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderMergeHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="sActivityId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderMergeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderWithActivityHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="sActivityId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderWithActivityHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithActivityHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="dArrTime" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+    <wsdl:part name="sActivityId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithActivityHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithActivityExHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="dArrTime" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+    <wsdl:part name="sActivityId" type="s:string" />
+    <wsdl:part name="sCreditNo" type="s:string" />
+    <wsdl:part name="payType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithActivityExHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithHotelListHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="jsonHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithHotelListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="jsonOrderID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderIDFromRequestNoHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderIDFromRequestNoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderMergeHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="dArrTime" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="sCreditNo" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+    <wsdl:part name="jsonPaymentCard" type="s:string" />
+    <wsdl:part name="sActivityId" type="s:string" />
+    <wsdl:part name="cardID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderMergeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="sCreditNo" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+    <wsdl:part name="jsonPaymentCard" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrder2HttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="sCreditNo" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+    <wsdl:part name="jsonPaymentCard" type="s:string" />
+    <wsdl:part name="payType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrder2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderExHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="dArrTime" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="sCreditNo" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+    <wsdl:part name="jsonPaymentCard" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderExHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOrderHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sOrderID" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOrderHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOrderWithCreditNoHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sOrderID" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sCreditNo" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOrderWithCreditNoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sOrderID" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderNoConditionHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sOrderID" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderNoConditionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceUpdatedHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="dModifiedSince" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceUpdatedHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceStateHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceStateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceOneHotelHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceOneHotelHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryActivityIDListHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryActivityIDListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelIDListHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelIDListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelIDListAllHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelIDListAllHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="jsonHotelID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHourRentHotelIDListHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHourRentHotelIDListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithHourRentListHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="jsonHotelNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithHourRentListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceWithHourRentListHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="jsonHotelNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceWithHourRentListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderWithHourRentHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderWithHourRentHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithHourRentHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="dArrTime" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithHourRentHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithHourRent2HttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="dArrTime" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+    <wsdl:part name="sCreditNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithHourRent2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderForAllRoomTypeHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderForAllRoomTypeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RequestOrderRefundHttpGetIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sOrderID" type="s:string" />
+    <wsdl:part name="dAmount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RequestOrderRefundHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithActivityListHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithActivityListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeAndPriceWithActivityListHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeAndPriceWithActivityListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderMergeHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="sActivityId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderMergeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderWithActivityHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="sActivityId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderWithActivityHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithActivityHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="dArrTime" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+    <wsdl:part name="sActivityId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithActivityHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithActivityExHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="dArrTime" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+    <wsdl:part name="sActivityId" type="s:string" />
+    <wsdl:part name="sCreditNo" type="s:string" />
+    <wsdl:part name="payType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithActivityExHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithHotelListHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="jsonHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithHotelListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="jsonOrderID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderIDFromRequestNoHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryOrderIDFromRequestNoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderMergeHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="dArrTime" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="sCreditNo" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+    <wsdl:part name="jsonPaymentCard" type="s:string" />
+    <wsdl:part name="sActivityId" type="s:string" />
+    <wsdl:part name="cardID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderMergeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="sCreditNo" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+    <wsdl:part name="jsonPaymentCard" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrder2HttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="sCreditNo" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+    <wsdl:part name="jsonPaymentCard" type="s:string" />
+    <wsdl:part name="payType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrder2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderExHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="dArrTime" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="sCreditNo" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+    <wsdl:part name="jsonPaymentCard" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderExHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOrderHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sOrderID" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOrderHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOrderWithCreditNoHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sOrderID" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sCreditNo" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOrderWithCreditNoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sOrderID" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderNoConditionHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sOrderID" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelOrderNoConditionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceUpdatedHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="dModifiedSince" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceUpdatedHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceStateHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceStateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceOneHotelHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceOneHotelHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryActivityIDListHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryActivityIDListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelIDListHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelIDListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelIDListAllHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelIDListAllHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="jsonHotelID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHotelHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHourRentHotelIDListHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryHourRentHotelIDListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithHourRentListHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="jsonHotelNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomFreeWithHourRentListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceWithHourRentListHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="jsonHotelNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryRoomPriceWithHourRentListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderWithHourRentHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderWithHourRentHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithHourRentHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="dArrTime" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithHourRentHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithHourRent2HttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="sRoomType" type="s:string" />
+    <wsdl:part name="iRoomCount" type="s:string" />
+    <wsdl:part name="sLinkName" type="s:string" />
+    <wsdl:part name="sLinkMobile" type="s:string" />
+    <wsdl:part name="sLinkEmail" type="s:string" />
+    <wsdl:part name="dArrTime" type="s:string" />
+    <wsdl:part name="sComment" type="s:string" />
+    <wsdl:part name="JsonDailyRate" type="s:string" />
+    <wsdl:part name="requestNo" type="s:string" />
+    <wsdl:part name="sCreditNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrderWithHourRent2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderForAllRoomTypeHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sHotelID" type="s:string" />
+    <wsdl:part name="dCheckIn" type="s:string" />
+    <wsdl:part name="dCheckOut" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoubleCheckBeforeCreateOrderForAllRoomTypeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RequestOrderRefundHttpPostIn">
+    <wsdl:part name="sAgentID" type="s:string" />
+    <wsdl:part name="sAuthCode" type="s:string" />
+    <wsdl:part name="sOrderID" type="s:string" />
+    <wsdl:part name="dAmount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RequestOrderRefundHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="AgentServiceSoap">
+    <wsdl:operation name="QueryRoomFreeWithActivityList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动)可用房量的查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeWithActivityListSoapIn" />
+      <wsdl:output message="tns:QueryRoomFreeWithActivityListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeAndPriceWithActivityList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动)房价的查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeAndPriceWithActivityListSoapIn" />
+      <wsdl:output message="tns:QueryRoomFreeAndPriceWithActivityListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderMerge">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">下单之前对房量和房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderMergeSoapIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderMergeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderWithActivity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动)下单之前对房量和房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderWithActivitySoapIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderWithActivitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithActivity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动)预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderWithActivitySoapIn" />
+      <wsdl:output message="tns:CreateOrderWithActivitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithActivityEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动+担保方式+支付方式)预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderWithActivityExSoapIn" />
+      <wsdl:output message="tns:CreateOrderWithActivityExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeWithHotelList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">单店可用房量批量查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeWithHotelListSoapIn" />
+      <wsdl:output message="tns:QueryRoomFreeWithHotelListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFree">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询剩余房量接口</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeSoapIn" />
+      <wsdl:output message="tns:QueryRoomFreeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询订单</wsdl:documentation>
+      <wsdl:input message="tns:QueryOrderSoapIn" />
+      <wsdl:output message="tns:QueryOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrderIDFromRequestNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据请求号查询新增订单</wsdl:documentation>
+      <wsdl:input message="tns:QueryOrderIDFromRequestNoSoapIn" />
+      <wsdl:output message="tns:QueryOrderIDFromRequestNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderMerge">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderMergeSoapIn" />
+      <wsdl:output message="tns:CreateOrderMergeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderSoapIn" />
+      <wsdl:output message="tns:CreateOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(支付)预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrder2SoapIn" />
+      <wsdl:output message="tns:CreateOrder2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderExSoapIn" />
+      <wsdl:output message="tns:CreateOrderExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">修改订单</wsdl:documentation>
+      <wsdl:input message="tns:ModifyOrderSoapIn" />
+      <wsdl:output message="tns:ModifyOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOrderWithCreditNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">修改订单（担保状态）</wsdl:documentation>
+      <wsdl:input message="tns:ModifyOrderWithCreditNoSoapIn" />
+      <wsdl:output message="tns:ModifyOrderWithCreditNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取消订单</wsdl:documentation>
+      <wsdl:input message="tns:CancelOrderSoapIn" />
+      <wsdl:output message="tns:CancelOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderNoCondition">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取消订单</wsdl:documentation>
+      <wsdl:input message="tns:CancelOrderNoConditionSoapIn" />
+      <wsdl:output message="tns:CancelOrderNoConditionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceUpdated">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询房价变更</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomPriceUpdatedSoapIn" />
+      <wsdl:output message="tns:QueryRoomPriceUpdatedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceState">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询房价变更</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomPriceStateSoapIn" />
+      <wsdl:output message="tns:QueryRoomPriceStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceOneHotel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询房价变更</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomPriceOneHotelSoapIn" />
+      <wsdl:output message="tns:QueryRoomPriceOneHotelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryActivityIDList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询可用活动ID</wsdl:documentation>
+      <wsdl:input message="tns:QueryActivityIDListSoapIn" />
+      <wsdl:output message="tns:QueryActivityIDListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotelIDList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询所有酒店ID(仅开放的酒店)</wsdl:documentation>
+      <wsdl:input message="tns:QueryHotelIDListSoapIn" />
+      <wsdl:output message="tns:QueryHotelIDListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotelIDListAll">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询所有酒店ID(包含未开放的酒店)</wsdl:documentation>
+      <wsdl:input message="tns:QueryHotelIDListAllSoapIn" />
+      <wsdl:output message="tns:QueryHotelIDListAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询基本酒店列表</wsdl:documentation>
+      <wsdl:input message="tns:QueryHotelSoapIn" />
+      <wsdl:output message="tns:QueryHotelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">下单之前对房量和房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderSoapIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHourRentHotelIDList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)查询开放了时租房预订功能的酒店</wsdl:documentation>
+      <wsdl:input message="tns:QueryHourRentHotelIDListSoapIn" />
+      <wsdl:output message="tns:QueryHourRentHotelIDListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeWithHourRentList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)可用房量的查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeWithHourRentListSoapIn" />
+      <wsdl:output message="tns:QueryRoomFreeWithHourRentListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceWithHourRentList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)房价的查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomPriceWithHourRentListSoapIn" />
+      <wsdl:output message="tns:QueryRoomPriceWithHourRentListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderWithHourRent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)下单之前对房量和房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderWithHourRentSoapIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderWithHourRentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithHourRent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)预订接口(担保)</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderWithHourRentSoapIn" />
+      <wsdl:output message="tns:CreateOrderWithHourRentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithHourRent2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)预订接口(担保可选)</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderWithHourRent2SoapIn" />
+      <wsdl:output message="tns:CreateOrderWithHourRent2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderForAllRoomType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">下单之前对所有房型房量房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderForAllRoomTypeSoapIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderForAllRoomTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestOrderRefund">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">中介请求订单退款</wsdl:documentation>
+      <wsdl:input message="tns:RequestOrderRefundSoapIn" />
+      <wsdl:output message="tns:RequestOrderRefundSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AgentServiceHttpGet">
+    <wsdl:operation name="QueryRoomFreeWithActivityList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动)可用房量的查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeWithActivityListHttpGetIn" />
+      <wsdl:output message="tns:QueryRoomFreeWithActivityListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeAndPriceWithActivityList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动)房价的查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeAndPriceWithActivityListHttpGetIn" />
+      <wsdl:output message="tns:QueryRoomFreeAndPriceWithActivityListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderMerge">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">下单之前对房量和房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderMergeHttpGetIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderMergeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderWithActivity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动)下单之前对房量和房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderWithActivityHttpGetIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderWithActivityHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithActivity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动)预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderWithActivityHttpGetIn" />
+      <wsdl:output message="tns:CreateOrderWithActivityHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithActivityEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动+担保方式+支付方式)预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderWithActivityExHttpGetIn" />
+      <wsdl:output message="tns:CreateOrderWithActivityExHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeWithHotelList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">单店可用房量批量查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeWithHotelListHttpGetIn" />
+      <wsdl:output message="tns:QueryRoomFreeWithHotelListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFree">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询剩余房量接口</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeHttpGetIn" />
+      <wsdl:output message="tns:QueryRoomFreeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询订单</wsdl:documentation>
+      <wsdl:input message="tns:QueryOrderHttpGetIn" />
+      <wsdl:output message="tns:QueryOrderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrderIDFromRequestNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据请求号查询新增订单</wsdl:documentation>
+      <wsdl:input message="tns:QueryOrderIDFromRequestNoHttpGetIn" />
+      <wsdl:output message="tns:QueryOrderIDFromRequestNoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderMerge">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderMergeHttpGetIn" />
+      <wsdl:output message="tns:CreateOrderMergeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderHttpGetIn" />
+      <wsdl:output message="tns:CreateOrderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(支付)预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrder2HttpGetIn" />
+      <wsdl:output message="tns:CreateOrder2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderExHttpGetIn" />
+      <wsdl:output message="tns:CreateOrderExHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">修改订单</wsdl:documentation>
+      <wsdl:input message="tns:ModifyOrderHttpGetIn" />
+      <wsdl:output message="tns:ModifyOrderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOrderWithCreditNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">修改订单（担保状态）</wsdl:documentation>
+      <wsdl:input message="tns:ModifyOrderWithCreditNoHttpGetIn" />
+      <wsdl:output message="tns:ModifyOrderWithCreditNoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取消订单</wsdl:documentation>
+      <wsdl:input message="tns:CancelOrderHttpGetIn" />
+      <wsdl:output message="tns:CancelOrderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderNoCondition">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取消订单</wsdl:documentation>
+      <wsdl:input message="tns:CancelOrderNoConditionHttpGetIn" />
+      <wsdl:output message="tns:CancelOrderNoConditionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceUpdated">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询房价变更</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomPriceUpdatedHttpGetIn" />
+      <wsdl:output message="tns:QueryRoomPriceUpdatedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceState">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询房价变更</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomPriceStateHttpGetIn" />
+      <wsdl:output message="tns:QueryRoomPriceStateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceOneHotel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询房价变更</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomPriceOneHotelHttpGetIn" />
+      <wsdl:output message="tns:QueryRoomPriceOneHotelHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryActivityIDList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询可用活动ID</wsdl:documentation>
+      <wsdl:input message="tns:QueryActivityIDListHttpGetIn" />
+      <wsdl:output message="tns:QueryActivityIDListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotelIDList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询所有酒店ID(仅开放的酒店)</wsdl:documentation>
+      <wsdl:input message="tns:QueryHotelIDListHttpGetIn" />
+      <wsdl:output message="tns:QueryHotelIDListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotelIDListAll">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询所有酒店ID(包含未开放的酒店)</wsdl:documentation>
+      <wsdl:input message="tns:QueryHotelIDListAllHttpGetIn" />
+      <wsdl:output message="tns:QueryHotelIDListAllHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询基本酒店列表</wsdl:documentation>
+      <wsdl:input message="tns:QueryHotelHttpGetIn" />
+      <wsdl:output message="tns:QueryHotelHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">下单之前对房量和房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderHttpGetIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHourRentHotelIDList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)查询开放了时租房预订功能的酒店</wsdl:documentation>
+      <wsdl:input message="tns:QueryHourRentHotelIDListHttpGetIn" />
+      <wsdl:output message="tns:QueryHourRentHotelIDListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeWithHourRentList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)可用房量的查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeWithHourRentListHttpGetIn" />
+      <wsdl:output message="tns:QueryRoomFreeWithHourRentListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceWithHourRentList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)房价的查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomPriceWithHourRentListHttpGetIn" />
+      <wsdl:output message="tns:QueryRoomPriceWithHourRentListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderWithHourRent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)下单之前对房量和房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderWithHourRentHttpGetIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderWithHourRentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithHourRent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)预订接口(担保)</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderWithHourRentHttpGetIn" />
+      <wsdl:output message="tns:CreateOrderWithHourRentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithHourRent2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)预订接口(担保可选)</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderWithHourRent2HttpGetIn" />
+      <wsdl:output message="tns:CreateOrderWithHourRent2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderForAllRoomType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">下单之前对所有房型房量房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderForAllRoomTypeHttpGetIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderForAllRoomTypeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestOrderRefund">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">中介请求订单退款</wsdl:documentation>
+      <wsdl:input message="tns:RequestOrderRefundHttpGetIn" />
+      <wsdl:output message="tns:RequestOrderRefundHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AgentServiceHttpPost">
+    <wsdl:operation name="QueryRoomFreeWithActivityList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动)可用房量的查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeWithActivityListHttpPostIn" />
+      <wsdl:output message="tns:QueryRoomFreeWithActivityListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeAndPriceWithActivityList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动)房价的查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeAndPriceWithActivityListHttpPostIn" />
+      <wsdl:output message="tns:QueryRoomFreeAndPriceWithActivityListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderMerge">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">下单之前对房量和房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderMergeHttpPostIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderMergeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderWithActivity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动)下单之前对房量和房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderWithActivityHttpPostIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderWithActivityHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithActivity">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动)预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderWithActivityHttpPostIn" />
+      <wsdl:output message="tns:CreateOrderWithActivityHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithActivityEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(活动+担保方式+支付方式)预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderWithActivityExHttpPostIn" />
+      <wsdl:output message="tns:CreateOrderWithActivityExHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeWithHotelList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">单店可用房量批量查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeWithHotelListHttpPostIn" />
+      <wsdl:output message="tns:QueryRoomFreeWithHotelListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFree">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询剩余房量接口</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeHttpPostIn" />
+      <wsdl:output message="tns:QueryRoomFreeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询订单</wsdl:documentation>
+      <wsdl:input message="tns:QueryOrderHttpPostIn" />
+      <wsdl:output message="tns:QueryOrderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrderIDFromRequestNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据请求号查询新增订单</wsdl:documentation>
+      <wsdl:input message="tns:QueryOrderIDFromRequestNoHttpPostIn" />
+      <wsdl:output message="tns:QueryOrderIDFromRequestNoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderMerge">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderMergeHttpPostIn" />
+      <wsdl:output message="tns:CreateOrderMergeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderHttpPostIn" />
+      <wsdl:output message="tns:CreateOrderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(支付)预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrder2HttpPostIn" />
+      <wsdl:output message="tns:CreateOrder2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">预订接口</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderExHttpPostIn" />
+      <wsdl:output message="tns:CreateOrderExHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">修改订单</wsdl:documentation>
+      <wsdl:input message="tns:ModifyOrderHttpPostIn" />
+      <wsdl:output message="tns:ModifyOrderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOrderWithCreditNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">修改订单（担保状态）</wsdl:documentation>
+      <wsdl:input message="tns:ModifyOrderWithCreditNoHttpPostIn" />
+      <wsdl:output message="tns:ModifyOrderWithCreditNoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取消订单</wsdl:documentation>
+      <wsdl:input message="tns:CancelOrderHttpPostIn" />
+      <wsdl:output message="tns:CancelOrderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderNoCondition">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取消订单</wsdl:documentation>
+      <wsdl:input message="tns:CancelOrderNoConditionHttpPostIn" />
+      <wsdl:output message="tns:CancelOrderNoConditionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceUpdated">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询房价变更</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomPriceUpdatedHttpPostIn" />
+      <wsdl:output message="tns:QueryRoomPriceUpdatedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceState">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询房价变更</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomPriceStateHttpPostIn" />
+      <wsdl:output message="tns:QueryRoomPriceStateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceOneHotel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询房价变更</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomPriceOneHotelHttpPostIn" />
+      <wsdl:output message="tns:QueryRoomPriceOneHotelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryActivityIDList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询可用活动ID</wsdl:documentation>
+      <wsdl:input message="tns:QueryActivityIDListHttpPostIn" />
+      <wsdl:output message="tns:QueryActivityIDListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotelIDList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询所有酒店ID(仅开放的酒店)</wsdl:documentation>
+      <wsdl:input message="tns:QueryHotelIDListHttpPostIn" />
+      <wsdl:output message="tns:QueryHotelIDListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotelIDListAll">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询所有酒店ID(包含未开放的酒店)</wsdl:documentation>
+      <wsdl:input message="tns:QueryHotelIDListAllHttpPostIn" />
+      <wsdl:output message="tns:QueryHotelIDListAllHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询基本酒店列表</wsdl:documentation>
+      <wsdl:input message="tns:QueryHotelHttpPostIn" />
+      <wsdl:output message="tns:QueryHotelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">下单之前对房量和房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderHttpPostIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHourRentHotelIDList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)查询开放了时租房预订功能的酒店</wsdl:documentation>
+      <wsdl:input message="tns:QueryHourRentHotelIDListHttpPostIn" />
+      <wsdl:output message="tns:QueryHourRentHotelIDListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeWithHourRentList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)可用房量的查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomFreeWithHourRentListHttpPostIn" />
+      <wsdl:output message="tns:QueryRoomFreeWithHourRentListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceWithHourRentList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)房价的查询</wsdl:documentation>
+      <wsdl:input message="tns:QueryRoomPriceWithHourRentListHttpPostIn" />
+      <wsdl:output message="tns:QueryRoomPriceWithHourRentListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderWithHourRent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)下单之前对房量和房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderWithHourRentHttpPostIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderWithHourRentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithHourRent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)预订接口(担保)</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderWithHourRentHttpPostIn" />
+      <wsdl:output message="tns:CreateOrderWithHourRentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithHourRent2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">(时租房)预订接口(担保可选)</wsdl:documentation>
+      <wsdl:input message="tns:CreateOrderWithHourRent2HttpPostIn" />
+      <wsdl:output message="tns:CreateOrderWithHourRent2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderForAllRoomType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">下单之前对所有房型房量房价进行验证</wsdl:documentation>
+      <wsdl:input message="tns:DoubleCheckBeforeCreateOrderForAllRoomTypeHttpPostIn" />
+      <wsdl:output message="tns:DoubleCheckBeforeCreateOrderForAllRoomTypeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestOrderRefund">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">中介请求订单退款</wsdl:documentation>
+      <wsdl:input message="tns:RequestOrderRefundHttpPostIn" />
+      <wsdl:output message="tns:RequestOrderRefundHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AgentServiceSoap" type="tns:AgentServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryRoomFreeWithActivityList">
+      <soap:operation soapAction="http://tempuri.org/QueryRoomFreeWithActivityList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeAndPriceWithActivityList">
+      <soap:operation soapAction="http://tempuri.org/QueryRoomFreeAndPriceWithActivityList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderMerge">
+      <soap:operation soapAction="http://tempuri.org/DoubleCheckBeforeCreateOrderMerge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderWithActivity">
+      <soap:operation soapAction="http://tempuri.org/DoubleCheckBeforeCreateOrderWithActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithActivity">
+      <soap:operation soapAction="http://tempuri.org/CreateOrderWithActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithActivityEx">
+      <soap:operation soapAction="http://tempuri.org/CreateOrderWithActivityEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeWithHotelList">
+      <soap:operation soapAction="http://tempuri.org/QueryRoomFreeWithHotelList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFree">
+      <soap:operation soapAction="http://tempuri.org/QueryRoomFree" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrder">
+      <soap:operation soapAction="http://tempuri.org/QueryOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrderIDFromRequestNo">
+      <soap:operation soapAction="http://tempuri.org/QueryOrderIDFromRequestNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderMerge">
+      <soap:operation soapAction="http://tempuri.org/CreateOrderMerge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <soap:operation soapAction="http://tempuri.org/CreateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder2">
+      <soap:operation soapAction="http://tempuri.org/CreateOrder2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderEx">
+      <soap:operation soapAction="http://tempuri.org/CreateOrderEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOrder">
+      <soap:operation soapAction="http://tempuri.org/ModifyOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOrderWithCreditNo">
+      <soap:operation soapAction="http://tempuri.org/ModifyOrderWithCreditNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <soap:operation soapAction="http://tempuri.org/CancelOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderNoCondition">
+      <soap:operation soapAction="http://tempuri.org/CancelOrderNoCondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceUpdated">
+      <soap:operation soapAction="http://tempuri.org/QueryRoomPriceUpdated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceState">
+      <soap:operation soapAction="http://tempuri.org/QueryRoomPriceState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceOneHotel">
+      <soap:operation soapAction="http://tempuri.org/QueryRoomPriceOneHotel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryActivityIDList">
+      <soap:operation soapAction="http://tempuri.org/QueryActivityIDList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotelIDList">
+      <soap:operation soapAction="http://tempuri.org/QueryHotelIDList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotelIDListAll">
+      <soap:operation soapAction="http://tempuri.org/QueryHotelIDListAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotel">
+      <soap:operation soapAction="http://tempuri.org/QueryHotel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrder">
+      <soap:operation soapAction="http://tempuri.org/DoubleCheckBeforeCreateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHourRentHotelIDList">
+      <soap:operation soapAction="http://tempuri.org/QueryHourRentHotelIDList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeWithHourRentList">
+      <soap:operation soapAction="http://tempuri.org/QueryRoomFreeWithHourRentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceWithHourRentList">
+      <soap:operation soapAction="http://tempuri.org/QueryRoomPriceWithHourRentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderWithHourRent">
+      <soap:operation soapAction="http://tempuri.org/DoubleCheckBeforeCreateOrderWithHourRent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithHourRent">
+      <soap:operation soapAction="http://tempuri.org/CreateOrderWithHourRent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithHourRent2">
+      <soap:operation soapAction="http://tempuri.org/CreateOrderWithHourRent2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderForAllRoomType">
+      <soap:operation soapAction="http://tempuri.org/DoubleCheckBeforeCreateOrderForAllRoomType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestOrderRefund">
+      <soap:operation soapAction="http://tempuri.org/RequestOrderRefund" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AgentServiceSoap12" type="tns:AgentServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryRoomFreeWithActivityList">
+      <soap12:operation soapAction="http://tempuri.org/QueryRoomFreeWithActivityList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeAndPriceWithActivityList">
+      <soap12:operation soapAction="http://tempuri.org/QueryRoomFreeAndPriceWithActivityList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderMerge">
+      <soap12:operation soapAction="http://tempuri.org/DoubleCheckBeforeCreateOrderMerge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderWithActivity">
+      <soap12:operation soapAction="http://tempuri.org/DoubleCheckBeforeCreateOrderWithActivity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithActivity">
+      <soap12:operation soapAction="http://tempuri.org/CreateOrderWithActivity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithActivityEx">
+      <soap12:operation soapAction="http://tempuri.org/CreateOrderWithActivityEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeWithHotelList">
+      <soap12:operation soapAction="http://tempuri.org/QueryRoomFreeWithHotelList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFree">
+      <soap12:operation soapAction="http://tempuri.org/QueryRoomFree" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrder">
+      <soap12:operation soapAction="http://tempuri.org/QueryOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrderIDFromRequestNo">
+      <soap12:operation soapAction="http://tempuri.org/QueryOrderIDFromRequestNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderMerge">
+      <soap12:operation soapAction="http://tempuri.org/CreateOrderMerge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <soap12:operation soapAction="http://tempuri.org/CreateOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder2">
+      <soap12:operation soapAction="http://tempuri.org/CreateOrder2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderEx">
+      <soap12:operation soapAction="http://tempuri.org/CreateOrderEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOrder">
+      <soap12:operation soapAction="http://tempuri.org/ModifyOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOrderWithCreditNo">
+      <soap12:operation soapAction="http://tempuri.org/ModifyOrderWithCreditNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <soap12:operation soapAction="http://tempuri.org/CancelOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderNoCondition">
+      <soap12:operation soapAction="http://tempuri.org/CancelOrderNoCondition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceUpdated">
+      <soap12:operation soapAction="http://tempuri.org/QueryRoomPriceUpdated" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceState">
+      <soap12:operation soapAction="http://tempuri.org/QueryRoomPriceState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceOneHotel">
+      <soap12:operation soapAction="http://tempuri.org/QueryRoomPriceOneHotel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryActivityIDList">
+      <soap12:operation soapAction="http://tempuri.org/QueryActivityIDList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotelIDList">
+      <soap12:operation soapAction="http://tempuri.org/QueryHotelIDList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotelIDListAll">
+      <soap12:operation soapAction="http://tempuri.org/QueryHotelIDListAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotel">
+      <soap12:operation soapAction="http://tempuri.org/QueryHotel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrder">
+      <soap12:operation soapAction="http://tempuri.org/DoubleCheckBeforeCreateOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHourRentHotelIDList">
+      <soap12:operation soapAction="http://tempuri.org/QueryHourRentHotelIDList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeWithHourRentList">
+      <soap12:operation soapAction="http://tempuri.org/QueryRoomFreeWithHourRentList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceWithHourRentList">
+      <soap12:operation soapAction="http://tempuri.org/QueryRoomPriceWithHourRentList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderWithHourRent">
+      <soap12:operation soapAction="http://tempuri.org/DoubleCheckBeforeCreateOrderWithHourRent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithHourRent">
+      <soap12:operation soapAction="http://tempuri.org/CreateOrderWithHourRent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithHourRent2">
+      <soap12:operation soapAction="http://tempuri.org/CreateOrderWithHourRent2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderForAllRoomType">
+      <soap12:operation soapAction="http://tempuri.org/DoubleCheckBeforeCreateOrderForAllRoomType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestOrderRefund">
+      <soap12:operation soapAction="http://tempuri.org/RequestOrderRefund" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AgentServiceHttpGet" type="tns:AgentServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="QueryRoomFreeWithActivityList">
+      <http:operation location="/QueryRoomFreeWithActivityList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeAndPriceWithActivityList">
+      <http:operation location="/QueryRoomFreeAndPriceWithActivityList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderMerge">
+      <http:operation location="/DoubleCheckBeforeCreateOrderMerge" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderWithActivity">
+      <http:operation location="/DoubleCheckBeforeCreateOrderWithActivity" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithActivity">
+      <http:operation location="/CreateOrderWithActivity" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithActivityEx">
+      <http:operation location="/CreateOrderWithActivityEx" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeWithHotelList">
+      <http:operation location="/QueryRoomFreeWithHotelList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFree">
+      <http:operation location="/QueryRoomFree" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrder">
+      <http:operation location="/QueryOrder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrderIDFromRequestNo">
+      <http:operation location="/QueryOrderIDFromRequestNo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderMerge">
+      <http:operation location="/CreateOrderMerge" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <http:operation location="/CreateOrder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder2">
+      <http:operation location="/CreateOrder2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderEx">
+      <http:operation location="/CreateOrderEx" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOrder">
+      <http:operation location="/ModifyOrder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOrderWithCreditNo">
+      <http:operation location="/ModifyOrderWithCreditNo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <http:operation location="/CancelOrder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderNoCondition">
+      <http:operation location="/CancelOrderNoCondition" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceUpdated">
+      <http:operation location="/QueryRoomPriceUpdated" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceState">
+      <http:operation location="/QueryRoomPriceState" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceOneHotel">
+      <http:operation location="/QueryRoomPriceOneHotel" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryActivityIDList">
+      <http:operation location="/QueryActivityIDList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotelIDList">
+      <http:operation location="/QueryHotelIDList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotelIDListAll">
+      <http:operation location="/QueryHotelIDListAll" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotel">
+      <http:operation location="/QueryHotel" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrder">
+      <http:operation location="/DoubleCheckBeforeCreateOrder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHourRentHotelIDList">
+      <http:operation location="/QueryHourRentHotelIDList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeWithHourRentList">
+      <http:operation location="/QueryRoomFreeWithHourRentList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceWithHourRentList">
+      <http:operation location="/QueryRoomPriceWithHourRentList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderWithHourRent">
+      <http:operation location="/DoubleCheckBeforeCreateOrderWithHourRent" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithHourRent">
+      <http:operation location="/CreateOrderWithHourRent" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithHourRent2">
+      <http:operation location="/CreateOrderWithHourRent2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderForAllRoomType">
+      <http:operation location="/DoubleCheckBeforeCreateOrderForAllRoomType" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestOrderRefund">
+      <http:operation location="/RequestOrderRefund" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AgentServiceHttpPost" type="tns:AgentServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="QueryRoomFreeWithActivityList">
+      <http:operation location="/QueryRoomFreeWithActivityList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeAndPriceWithActivityList">
+      <http:operation location="/QueryRoomFreeAndPriceWithActivityList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderMerge">
+      <http:operation location="/DoubleCheckBeforeCreateOrderMerge" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderWithActivity">
+      <http:operation location="/DoubleCheckBeforeCreateOrderWithActivity" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithActivity">
+      <http:operation location="/CreateOrderWithActivity" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithActivityEx">
+      <http:operation location="/CreateOrderWithActivityEx" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeWithHotelList">
+      <http:operation location="/QueryRoomFreeWithHotelList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFree">
+      <http:operation location="/QueryRoomFree" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrder">
+      <http:operation location="/QueryOrder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOrderIDFromRequestNo">
+      <http:operation location="/QueryOrderIDFromRequestNo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderMerge">
+      <http:operation location="/CreateOrderMerge" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <http:operation location="/CreateOrder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder2">
+      <http:operation location="/CreateOrder2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderEx">
+      <http:operation location="/CreateOrderEx" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOrder">
+      <http:operation location="/ModifyOrder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOrderWithCreditNo">
+      <http:operation location="/ModifyOrderWithCreditNo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <http:operation location="/CancelOrder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrderNoCondition">
+      <http:operation location="/CancelOrderNoCondition" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceUpdated">
+      <http:operation location="/QueryRoomPriceUpdated" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceState">
+      <http:operation location="/QueryRoomPriceState" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceOneHotel">
+      <http:operation location="/QueryRoomPriceOneHotel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryActivityIDList">
+      <http:operation location="/QueryActivityIDList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotelIDList">
+      <http:operation location="/QueryHotelIDList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotelIDListAll">
+      <http:operation location="/QueryHotelIDListAll" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHotel">
+      <http:operation location="/QueryHotel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrder">
+      <http:operation location="/DoubleCheckBeforeCreateOrder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryHourRentHotelIDList">
+      <http:operation location="/QueryHourRentHotelIDList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomFreeWithHourRentList">
+      <http:operation location="/QueryRoomFreeWithHourRentList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRoomPriceWithHourRentList">
+      <http:operation location="/QueryRoomPriceWithHourRentList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderWithHourRent">
+      <http:operation location="/DoubleCheckBeforeCreateOrderWithHourRent" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithHourRent">
+      <http:operation location="/CreateOrderWithHourRent" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderWithHourRent2">
+      <http:operation location="/CreateOrderWithHourRent2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoubleCheckBeforeCreateOrderForAllRoomType">
+      <http:operation location="/DoubleCheckBeforeCreateOrderForAllRoomType" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestOrderRefund">
+      <http:operation location="/RequestOrderRefund" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AgentService">
+    <wsdl:port name="AgentServiceSoap" binding="tns:AgentServiceSoap">
+      <soap:address location="http://10.1.153.52:8090/AgentService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AgentServiceSoap12" binding="tns:AgentServiceSoap12">
+      <soap12:address location="http://10.1.153.52:8090/AgentService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AgentServiceHttpGet" binding="tns:AgentServiceHttpGet">
+      <http:address location="http://10.1.153.52:8090/AgentService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AgentServiceHttpPost" binding="tns:AgentServiceHttpPost">
+      <http:address location="http://10.1.153.52:8090/AgentService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

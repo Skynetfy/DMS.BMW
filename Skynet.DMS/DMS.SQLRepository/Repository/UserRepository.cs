@@ -199,5 +199,41 @@ namespace DMS.SQLRepository.Repository
             }
             return list;
         }
+
+        public User GetUser(string username)
+        {
+            var user = new User();
+            try
+            {
+                var sql = @"SELECT * FROM DMS_User 
+                           WHERE UserName=@UserName";
+                DbCommand cmd = db.GetSqlStringCommand(sql);
+                db.AddInParameter(cmd, "@UserName", DbType.String, username);
+                var ds = db.ExecuteDataSet(cmd);
+                if (ds != null && ds.Tables[0] != null && ds.Tables[0].Rows.Count > 0)
+                {
+                    var dt = ds.Tables[0];
+                    user = new User()
+                    {
+                        Id = Convert.ToInt64(dt.Rows[0]["Id"]),
+                        UserName = dt.Rows[0]["UserName"].ToString(),
+                        DisplayName = dt.Rows[0]["DisplayName"].ToString(),
+                        Password = dt.Rows[0]["PassWord"].ToString(),
+                        Email = dt.Rows[0]["Email"].ToString(),
+                        PhoneNo = dt.Rows[0]["Phone"].ToString(),
+                        Status = Convert.ToInt32(dt.Rows[0]["Status"]),
+                        IsDelete = Convert.ToBoolean(dt.Rows[0]["IsDelete"]),
+                        LastModifyDate = Convert.ToDateTime(dt.Rows[0]["ModifyDate"]),
+                        CreateDate = Convert.ToDateTime(dt.Rows[0]["CreateDate"])
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex.Message);
+                throw;
+            }
+            return user;
+        }
     }
 }

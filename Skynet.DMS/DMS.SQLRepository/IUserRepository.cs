@@ -20,5 +20,7 @@ namespace DMS.SQLRepository
         int GetPageCount(string search);
 
         User GetUser(Int64 id);
+
+        User GetUser(string username);
     }
 }
