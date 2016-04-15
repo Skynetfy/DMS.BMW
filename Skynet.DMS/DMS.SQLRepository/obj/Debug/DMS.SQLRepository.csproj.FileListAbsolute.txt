@@ -18,3 +18,13 @@ E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.SQLRepository\bin\Debug\NLog.xml
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.SQLRepository\obj\Debug\DMS.SQLRepository.csprojResolveAssemblyReference.cache
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.SQLRepository\obj\Debug\DMS.SQLRepository.dll
 E:\work\Projects\DMS\dms.bmw\Skynet.DMS\DMS.SQLRepository\obj\Debug\DMS.SQLRepository.pdb
+E:\work\DMS\DMS\dms.bmw\Skynet.DMS\DMS.SQLRepository\bin\Debug\DMS.SQLRepository.dll
+E:\work\DMS\DMS\dms.bmw\Skynet.DMS\DMS.SQLRepository\bin\Debug\DMS.SQLRepository.pdb
+E:\work\DMS\DMS\dms.bmw\Skynet.DMS\DMS.SQLRepository\bin\Debug\DMS.Entities.dll
+E:\work\DMS\DMS\dms.bmw\Skynet.DMS\DMS.SQLRepository\bin\Debug\HZ.HHub.Comm.dll
+E:\work\DMS\DMS\dms.bmw\Skynet.DMS\DMS.SQLRepository\bin\Debug\NLog.dll
+E:\work\DMS\DMS\dms.bmw\Skynet.DMS\DMS.SQLRepository\bin\Debug\DMS.Entities.pdb
+E:\work\DMS\DMS\dms.bmw\Skynet.DMS\DMS.SQLRepository\bin\Debug\NLog.xml
+E:\work\DMS\DMS\dms.bmw\Skynet.DMS\DMS.SQLRepository\obj\Debug\DMS.SQLRepository.csprojResolveAssemblyReference.cache
+E:\work\DMS\DMS\dms.bmw\Skynet.DMS\DMS.SQLRepository\obj\Debug\DMS.SQLRepository.dll
+E:\work\DMS\DMS\dms.bmw\Skynet.DMS\DMS.SQLRepository\obj\Debug\DMS.SQLRepository.pdb
